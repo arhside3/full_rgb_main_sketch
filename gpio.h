@@ -1,0 +1,17 @@
+#ifndef GPIO_H
+#define GPIO_H
+
+byte BRIGHTNESS = 255;
+
+typedef enum {
+    BLINK_GPIO_BLUE = 23,
+    BLINK_GPIO_GRREN = 19,
+    BLINK_GPIO_YELLOW = 22,
+    BLINK_GPIO_RED = 21,
+    BLINK_GPIO_WHITE = 18
+} GPIO;
+
+const GPIO ALL_GPIOS[] = {BLINK_GPIO_BLUE, BLINK_GPIO_GRREN, BLINK_GPIO_YELLOW, BLINK_GPIO_RED, BLINK_GPIO_WHITE};
+const int NUM_GPIOS = sizeof(ALL_GPIOS) / sizeof(ALL_GPIOS[0]);
+
+#endif
