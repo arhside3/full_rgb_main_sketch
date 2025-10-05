@@ -7,10 +7,7 @@
 #define RED_COLOR_HEX 0xff0000
 #define GREEN_COLOR_HEX 0x00ff00
 #define BLUE_COLOR_HEX 0x0000ff
-
-#define RED_CHANNEL_PIN 27
-#define GREEN_CHANNEL_PIN 26
-#define BLUE_CHANNEL_PIN 25
+#define YELLOW_COLOR_HEX 0xfdff00
 
 #define CLEAR 0
 #define DOT 1
@@ -45,7 +42,13 @@ std::map<char, std::array<int, 5>> morse_code_mapping{
     {'z', std::array<int, 5>{DASH, DASH, DOT, DOT, CLEAR}}
 };
 
-void setColor(long hexColor);
+// RGB GPIO
+void setColorRGB(long hexColor);
 void turnOffLED();
+void resetColorRGB();
+
+// Plain GPIO
+void turnOffGPIOLEDs();
+void resetColorGPIOLEDs();
 
 #endif
